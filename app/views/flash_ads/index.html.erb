@@ -1,0 +1,44 @@
+
+	<% if @flash_ads.empty? %>
+		Noch keine Flash dateien
+	<% else %>
+		<p><em>Die Flash Banner sind skaliert um hier ganz dargestellet zu werden, den titel der Ad klicken</em></p>
+<% for flash_ad in @flash_ads %>
+<div id="flash_ads_box">
+
+	<div>
+		<div id="flash">
+				<%= flashobject_tag (url_for_file_column(flash_ad, "file")), :parameters => {:scale => 'true'}, :size => '600x100' %>
+		</div>
+		<div id="flashdesc">
+			<strong><%= link_to "#{flash_ad.title}", :controller => "flash_ads", :action => "show", :id => flash_ad.id  %></strong>
+			<br />
+			<em><%= flash_ad.description %></em>
+			<br />
+			Url zum einbetten in die Netzwerke: <span class="url"><%= link_to "http://192.168.2.105:3000#{url_for_file_column(flash_ad, "file")}", url_for_file_column(flash_ad, "file") %></span><br /> Mit Rechtsklick "Ziel speichern unter ..." auswählen um die .swf zu speichern.<br />
+			<%= flash_ad.category %>
+			<br />
+			<%= flash_ad.release_date %>
+			<br />
+				<%= link_to "show", :controller => "flash_ads", :action => "show", :id => flash_ad.id %> | 
+				<% if logged_in? %>
+				<% if current_user.has_role?('administrator') %>
+				<%= link_to "edit", edit_flash_ad_path(flash_ad) %> |
+				<%= link_to "delete", flash_ad, :confirm => 'really delete?', :method => :delete%>
+				<% end %>
+				<% end %>
+		</div>
+	
+
+
+
+	</div>
+	</div>
+<% end %>
+<% end %>
+
+
+
+
+
+

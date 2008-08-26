@@ -1,0 +1,28 @@
+
+	<% if @landingpages.empty? %>
+		Noch keine Landingpages
+	<% else %>	
+	<% for landingpage in @landingpages -%>
+		<div id="ads_box">
+			<div id="lp_box">
+				<strong><%= landingpage.title %></strong>
+				<br />
+				<em><%= link_to landingpage.description, "http://lp.trade-a-game.de/#{landingpage.description}", :target => 'new' %></em>
+				<br />
+				<%= landingpage.category %>
+				
+					<br /> 
+					<% if logged_in? %>
+					<% if current_user.has_role?('administrator') %>
+					<%= link_to "edit", edit_landingpage_path(landingpage) %> |
+					<%= link_to "delete", landingpage, :confirm => 'really delete?', :method => :delete%>
+					<% end %>
+					<% end %>
+			</div>
+		</div>
+		
+	
+
+	<% end %>
+
+<% end -%>

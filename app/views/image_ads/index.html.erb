@@ -1,0 +1,41 @@
+
+
+	<% if @image_ads.empty? %>
+		Noch keine Bilder
+	<% else %>	
+	<% for image_ad in @image_ads -%>
+		<div id="ads_box">
+			<div id="image">
+				<%= image_for(image_ad, :thumb) %>
+					
+			</div>
+			<div id="description">
+				<strong><%= image_ad.title %></strong>
+				<br />
+				<em><%= image_ad.description %></em>
+				<br />
+				<%= image_ad.category %>
+				<br />
+				<%= image_ad.release_date %>
+				<br />
+					<%= link_to "show", :controller => "image_ads", :action => "show", :id => image_ad.id %> | 
+					<% if logged_in? %>
+					<% if current_user.has_role?('administrator') %>
+					<%= link_to "edit", edit_image_ad_path(image_ad) %> |
+					<%= link_to "delete", image_ad, :confirm => 'really delete?', :method => :delete%>
+					<% end %>
+					<% end %>
+			</div>
+		
+	
+
+		<br style="clear:both;" />
+
+		</div>
+	<% end %>
+
+<% end -%>
+
+
+
+

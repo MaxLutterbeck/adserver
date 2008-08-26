@@ -1,0 +1,25 @@
+<%= error_messages_for :landingpage %>
+
+<% form_for @landingpage do |f| %>
+<p>
+	<b>Titel</b><br />
+	<%= f.text_field :title %>
+</p>
+
+<p>
+	<b>URL <span style="font-size: 8pt; color: #ccc; font-weight: normal">(hier wird nur der relative pfad zu lp.trade-a-game.de eingetragen, das "http://lp.tradde-a-game.de" wird automatisch hinzugefügt)</span></b><br />
+	<%= f.text_area :description, :cols => 50, :rows => 2 %>
+</p>
+
+<p>
+	<b>Kategorie</b></br>
+	<%= f.text_field :category %>
+</p>
+
+
+<p>
+
+	<%= f.submit "Update", :onclick => "return #{confirm_javascript_function("You sure?")}" %>
+</p>
+
+<% end %>

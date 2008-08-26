@@ -1,0 +1,23 @@
+	<br />
+	Image Ads:
+	<div style="border: 1px solid #ccc; width: 150px;">
+		
+	<% for image_ad in @image_ads %>
+		<%= link_to "&raquo; #{image_ad.title}", :controller => "image_ads", :action => "show", :id => image_ad.id %><br />
+	<% end %>
+	</div>
+	<br />
+	Flash Ads:
+	<div style="border: 1px solid #ccc; width: 150px;">
+	<% for flash_ad in @flash_ads %>
+		<%= link_to "&raquo; #{flash_ad.title}", :controller => "flash_ads", :action => "show", :id => flash_ad.id %>
+	<% end %>
+	</div>
+	<br />
+	
+	<% if logged_in? %>
+	<% if current_user.has_role?('administrator') %>
+	<%= link_to 'New Image Ad', :controller => 'image_ads', :action => 'new' %><br/>
+	<%= link_to 'New Flash Ad', :controller => 'flash_ads', :action => 'new' %>
+	<% end %>
+	<% end %>

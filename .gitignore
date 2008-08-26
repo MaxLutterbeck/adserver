@@ -1,0 +1,312 @@
+Last login: Tue Aug 26 11:47:20 on console
+You have mail.
+max:~ maxlutterbeck$ cd Documents/rails
+max:rails maxlutterbeck$ cd adserver2
+max:adserver2 maxlutterbeck$ git reset --hard
+Checking out files: 100% (186/186), done.
+HEAD is now at cd8ea4e first commit
+max:adserver2 maxlutterbeck$ touch README
+max:adserver2 maxlutterbeck$ git add README
+max:adserver2 maxlutterbeck$ git commit -m 'first commit'
+# On branch master
+# Untracked files:
+#   (use "git add <file>..." to include in what will be committed)
+#
+#       .DS_Store
+#       ._Rakefile
+#       .com.apple.timemachine.supported
+#       app/controllers/adcreator_controller.rb
+#       app/controllers/landingpages_controller.rb
+#       app/helpers/adcreator_helper.rb
+#       app/helpers/landingpages_helper.rb
+#       app/models/flash_ad_mailer.rb
+#       app/models/flash_ad_observer.rb
+#       app/models/image.rb
+#       app/models/image_ad_mailer.rb
+#       app/models/image_ad_observer.rb
+#       app/models/image_service.rb
+#       app/models/landingpage.rb
+#       app/views/adcreator/
+#       app/views/flash_ad_mailer/
+#       app/views/flash_ads/category.html.erb
+#       app/views/flash_ads/index.html.erb
+#       app/views/image_ad_mailer/
+#       app/views/image_ads/index.html.erb
+#       app/views/landingpages/
+#       app/views/layouts/flash.html.erb
+#       app/views/layouts/lp.html.erb
+#       app/views/layouts/other.html.erb
+#       config/amazon_s3.yml
+#       db/migrate/008_create_images.rb
+#       db/migrate/009_create_image_services.rb
+#       db/migrate/010_create_landingpages.rb
+#       log/.DS_Store
+#       public/.DS_Store
+#       public/flash_ad/
+#       public/images/.DS_Store
+#       public/images/Dark_Knight_15.jpg
+#       public/images/Dark_Knight_15_thumb.jpg
+#       public/images/adServer.png
+#       public/images/ads_box.png
+#       public/images/bg_bottom.png
+#       public/images/bg_top.png
+#       public/images/bildbanner.png
+#       public/images/flashbanner.png
+#       public/images/head.jpg
+#       public/images/landingpages.png
+#       public/images/navi-bg.png
+#       public/images/navi-flash-bg.png
+#       public/images/navi-lp-bg.png
+#       public/images/navi-other-bg.png
+#       public/images/navi_bildbanner.jpg
+#       public/images/navi_flashbanner.jpg
+#       public/images/navi_inactive.png
+max:adserver2 maxlutterbeck$ git remote add origin git@github.com:MaxLutterbeck/ads.git
+fatal: remote origin already exists.
+max:adserver2 maxlutterbeck$ git remote add origin git@github.com:MaxLutterbeck/ads.git
+fatal: remote origin already exists.
+max:adserver2 maxlutterbeck$ git reset --hard
+HEAD is now at cd8ea4e first commit
+max:adserver2 maxlutterbeck$ touch READMEmax:adserver2 maxlutterbeck$ git add READMEmax:adserver2 maxlutterbeck$ git commit -m 'first commit'# On branch master
+# Untracked files:
+#   (use "git add <file>..." to include in what will be committed)
+#
+#       .DS_Store
+#       ._Rakefile
+#       .com.apple.timemachine.supported
+#       app/controllers/adcreator_controller.rb
+#       app/controllers/landingpages_controller.rb
+#       app/helpers/adcreator_helper.rb
+#       app/helpers/landingpages_helper.rb
+#       app/models/flash_ad_mailer.rb
+#       app/models/flash_ad_observer.rb
+#       app/models/image.rb
+#       app/models/image_ad_mailer.rb
+#       app/models/image_ad_observer.rb
+#       app/models/image_service.rb
+#       app/models/landingpage.rb
+#       app/views/adcreator/
+#       app/views/flash_ad_mailer/
+#       app/views/flash_ads/category.html.erb
+#       app/views/flash_ads/index.html.erb
+#       app/views/image_ad_mailer/
+#       app/views/image_ads/index.html.erb
+#       app/views/landingpages/
+#       app/views/layouts/flash.html.erb
+#       app/views/layouts/lp.html.erb
+#       app/views/layouts/other.html.erb
+#       config/amazon_s3.yml
+#       db/migrate/008_create_images.rb
+#       db/migrate/009_create_image_services.rb
+#       db/migrate/010_create_landingpages.rb
+#       log/.DS_Store
+#       public/.DS_Store
+#       public/flash_ad/
+#       public/images/.DS_Store
+#       public/images/Dark_Knight_15.jpg
+#       public/images/Dark_Knight_15_thumb.jpg
+#       public/images/adServer.png
+#       public/images/ads_box.png
+#       public/images/bg_bottom.png
+#       public/images/bg_top.png
+#       public/images/bildbanner.png
+#       public/images/flashbanner.png
+#       public/images/head.jpg
+#       public/images/landingpages.png
+#       public/images/navi-bg.png
+#       public/images/navi-flash-bg.png
+#       public/images/navi-lp-bg.png
+#       public/images/navi-other-bg.png
+#       public/images/navi_bildbanner.jpg
+#       public/images/navi_flashbanner.jpg
+#       public/images/navi_inactive.png
+#       public/images/navi_landingpages.jpg
+#       public/images/navi_sonstiges.jpg
+#       public/images/searchfield.png
+#       public/images/sonstiges.png
+#       public/images/spielverkaufen.jpg
+#       public/images/spielverkaufen_thumb.jpg
+#       public/images/the-dark-knight-wallpaper-5-1600.jpg
+#       public/images/the-dark-knight-wallpaper-5-1600_thumb.jpg
+#       public/javascripts/flashobject.js
+#       public/javascripts/swfobject.js
+#       test/fixtures/image_services.yml
+#       test/fixtures/images.yml
+#       test/fixtures/landingpages.yml
+#       test/functional/adcreator_controller_test.rb
+#       test/functional/landingpages_controller_test.rb
+#       test/unit/image_service_test.rb
+#       test/unit/image_test.rb
+#       test/unit/landingpage_test.rb
+#       tmp/
+#       vendor/.DS_Store
+#       vendor/plugins/attachment_fu/
+#       vendor/plugins/flashobject_helper/
+nothing added to commit but untracked files present (use "git add" to track)
+max:adserver2 maxlutterbeck$ git remote add origin git@github.com:MaxLutterbeck/ads.git
+fatal: remote origin already exists.
+max:adserver2 maxlutterbeck$ cd ~
+max:~ maxlutterbeck$ cd .ssh
+max:.ssh maxlutterbeck$ ssh-kegen
+-bash: ssh-kegen: command not found
+max:.ssh maxlutterbeck$ sh-keygen
+-bash: sh-keygen: command not found
+max:.ssh maxlutterbeck$ ssh-kegen
+-bash: ssh-kegen: command not found
+max:.ssh maxlutterbeck$ ssh-keygen
+Generating public/private rsa key pair.
+Enter file in which to save the key (/Users/maxlutterbeck/.ssh/id_rsa): 
+/Users/maxlutterbeck/.ssh/id_rsa already exists.
+Overwrite (y/n)? y
+Enter passphrase (empty for no passphrase): 
+Enter same passphrase again: 
+Your identification has been saved in /Users/maxlutterbeck/.ssh/id_rsa.
+Your public key has been saved in /Users/maxlutterbeck/.ssh/id_rsa.pub.
+The key fingerprint is:
+ee:1d:9c:68:e6:13:5f:67:2f:a9:96:d4:f6:fe:4a:df maxlutterbeck@max
+max:.ssh maxlutterbeck$ ssh-keygen
+Generating public/private rsa key pair.
+Enter file in which to save the key (/Users/maxlutterbeck/.ssh/id_rsa): 
+/Users/maxlutterbeck/.ssh/id_rsa already exists.
+Overwrite (y/n)? y
+Enter passphrase (empty for no passphrase): 
+Enter same passphrase again: 
+Your identification has been saved in /Users/maxlutterbeck/.ssh/id_rsa.
+Your public key has been saved in /Users/maxlutterbeck/.ssh/id_rsa.pub.
+The key fingerprint is:
+de:7f:9e:50:cb:ad:49:99:e5:11:90:0f:7d:39:60:04 maxlutterbeck@max
+max:.ssh maxlutterbeck$ cat id_rsa.pub | pbcopy
+max:.ssh maxlutterbeck$ cd ..
+max:~ maxlutterbeck$ cd Documents/rails/adserver2
+max:adserver2 maxlutterbeck$ git reset --hard
+HEAD is now at cd8ea4e first commit
+max:adserver2 maxlutterbeck$ git init
+Reinitialized existing Git repository in .git/
+max:adserver2 maxlutterbeck$ touch README
+max:adserver2 maxlutterbeck$ git add README
+max:adserver2 maxlutterbeck$ git commit -m 'first commit'# On branch master
+# Untracked files:
+#   (use "git add <file>..." to include in what will be committed)
+#
+#       .DS_Store
+#       ._Rakefile
+#       .com.apple.timemachine.supported
+#       app/controllers/adcreator_controller.rb
+#       app/controllers/landingpages_controller.rb
+#       app/helpers/adcreator_helper.rb
+#       app/helpers/landingpages_helper.rb
+#       app/models/flash_ad_mailer.rb
+#       app/models/flash_ad_observer.rb
+#       app/models/image.rb
+#       app/models/image_ad_mailer.rb
+#       app/models/image_ad_observer.rb
+#       app/models/image_service.rb
+#       app/models/landingpage.rb
+#       app/views/adcreator/
+#       app/views/flash_ad_mailer/
+#       app/views/flash_ads/category.html.erb
+#       app/views/flash_ads/index.html.erb
+#       app/views/image_ad_mailer/
+#       app/views/image_ads/index.html.erb
+#       app/views/landingpages/
+#       app/views/layouts/flash.html.erb
+#       app/views/layouts/lp.html.erb
+#       app/views/layouts/other.html.erb
+#       config/amazon_s3.yml
+#       db/migrate/008_create_images.rb
+#       db/migrate/009_create_image_services.rb
+#       db/migrate/010_create_landingpages.rb
+#       log/.DS_Store
+#       public/.DS_Store
+#       public/flash_ad/
+#       public/images/.DS_Store
+#       public/images/Dark_Knight_15.jpg
+#       public/images/Dark_Knight_15_thumb.jpg
+#       public/images/adServer.png
+#       public/images/ads_box.png
+#       public/images/bg_bottom.png
+#       public/images/bg_top.png
+#       public/images/bildbanner.png
+#       public/images/flashbanner.png
+#       public/images/head.jpg
+#       public/images/landingpages.png
+#       public/images/navi-bg.png
+#       public/images/navi-flash-bg.png
+#       public/images/navi-lp-bg.png
+#       public/images/navi-other-bg.png
+#       public/images/navi_bildbanner.jpg
+#       public/images/navi_flashbanner.jpg
+#       public/images/navi_inactive.png
+#       public/images/navi_landingpages.jpg
+#       public/images/navi_sonstiges.jpg
+#       public/images/searchfield.png
+#       public/images/sonstiges.png
+#       public/images/spielverkaufen.jpg
+#       public/images/spielverkaufen_thumb.jpg
+#       public/images/the-dark-knight-wallpaper-5-1600.jpg
+#       public/images/the-dark-knight-wallpaper-5-1600_thumb.jpg
+#       public/javascripts/flashobject.js
+#       public/javascripts/swfobject.js
+#       test/fixtures/image_services.yml
+#       test/fixtures/images.yml
+#       test/fixtures/landingpages.yml
+#       test/functional/adcreator_controller_test.rb
+#       test/functional/landingpages_controller_test.rb
+#       test/unit/image_service_test.rb
+#       test/unit/image_test.rb
+#       test/unit/landingpage_test.rb
+#       tmp/
+#       vendor/.DS_Store
+#       vendor/plugins/attachment_fu/
+#       vendor/plugins/flashobject_helper/
+nothing added to commit but untracked files present (use "git add" to track)
+max:adserver2 maxlutterbeck$ git remote add origin git@github.com:MaxLutterbeck/adserver.git
+fatal: remote origin already exists.
+max:adserver2 maxlutterbeck$ cd .git
+max:.git maxlutterbeck$ cd ..
+max:adserver2 maxlutterbeck$ rm-rf .git
+-bash: rm-rf: command not found
+max:adserver2 maxlutterbeck$ rm -rf .git
+max:adserver2 maxlutterbeck$ cd .git
+-bash: cd: .git: No such file or directory
+max:adserver2 maxlutterbeck$ git init
+Initialized empty Git repository in .git/
+max:adserver2 maxlutterbeck$ touch README
+max:adserver2 maxlutterbeck$ git add README
+max:adserver2 maxlutterbeck$ git commit -m 'first commit'Created initial commit 1c1d7ed: first commit
+ 1 files changed, 203 insertions(+), 0 deletions(-)
+ create mode 100755 README
+max:adserver2 maxlutterbeck$ git remote add origin git@github.com:MaxLutterbeck/adserver.git
+max:adserver2 maxlutterbeck$ git push origin master
+Enter passphrase for key '/Users/maxlutterbeck/.ssh/id_rsa': 
+Counting objects: 3, done.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 3.91 KiB, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To git@github.com:MaxLutterbeck/adserver.git
+ * [new branch]      master -> master
+max:adserver2 maxlutterbeck$ git commit -a -m 'added the rest'
+*.log
+db/schema.rb
+db/schema.sql
+
+~                                                                               
+~                                                                               
+~                                                                               
+~                                                                               
+~                                                                               
+~                                                                               
+~                                                                               
+~                                                                               
+~                                                                               
+~                                                                               
+~                                                                               
+~                                                                               
+~                                                                               
+~                                                                               
+~                                                                               
+~                                                                               
+~                                                                               
+~                                                                               
+~                                                                               
+-- INSERT --

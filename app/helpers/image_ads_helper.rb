@@ -1,0 +1,2 @@
+module ImageAdsHelper
+end

@@ -1,0 +1,57 @@
+<html>
+<head>
+	<title>AdServer</title>
+	<%= javascript_include_tag :defaults %>
+	<%= stylesheet_link_tag 'ads_style' %>
+	<%= javascript_include_tag 'swfobject' %>
+</head>
+<body>
+	<div id="wrapper">
+		<div id="bg_top">
+		</div>
+		<div id="head">
+			<div id="header_logo">
+			</div>
+			
+			<div id="navi_bildbanner">
+			</div>
+			
+			<div id="main_head_navi">
+				<ul>
+					<li><%= link_to '  ', root_path%></li>
+					<li><%= link_to '  ', flash_ads_path%></li>
+				</ul>
+				<ul id="headsearch">	
+					<% form_tag :controller => 'search', :action => 'index'  do  %>
+					<%= text_field_tag :query, "Suchen ...", :onfocus => 'clearDefault(this)', :onBlur => 'replaceDefault(this)', :size => 50 %>
+					&nbsp;	<%= submit_tag "GO!", :class => "go" %>
+					<% end %>
+				</ul>
+			</div>
+			
+			
+		</head>
+
+		
+<ul>
+<% if logged_in? %>
+<li>Logged in as:</li>
+<li><%= link_to h(current_user.login.capitalize), user_path(current_user) %></li>
+<ul>
+<li><%= link_to 'Edit Profile', edit_user_path(current_user) %></li>
+<li><%= link_to 'Change Password', change_password_path %></li>
+<li><%= link_to 'Log Out', logout_url %></li>
+<% if current_user.has_role?('administrator') %>
+<li><%= link_to 'Administer Users', users_path %></li>
+<li><%= link_to 'Benutzer hinzufügen', new_user_path %></li>
+<% end %>
+<% else %>
+<%= render :partial => 'sessions/new' %>
+<% end %>
+
+</ul>
+
+<%= yield %>
+	</div>
+</body>
+</html>

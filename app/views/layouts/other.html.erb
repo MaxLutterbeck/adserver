@@ -1,0 +1,64 @@
+<html>
+<head>
+	<title>AdServer</title>
+	<%= javascript_include_tag :defaults %>
+	<%= stylesheet_link_tag 'ads_style' %>
+	<%= javascript_include_tag 'swfobject' %>
+</head>
+<body>
+<div id="wrapper">
+	<div id="bg_top">
+	</div>
+		<div id="header_logo">
+			<%= link_to (image_tag 'adServer.png'), root_path %>
+		</div>
+
+		<div id="main_navi" class="other">
+			<div id="main_head_navi">
+					<ul>
+						<li class="image"><%= link_to 'Bildbanner', image_ads_path%></li>
+						<li class="flash"><%= link_to 'Flashbanner', flash_ads_path%></li>
+						<li class="lp"><%= link_to 'Landingpages', landingpages_path%></li>
+						<li class="other"><%= link_to 'AdCreator', adcreator_path%></li>
+					</ul>
+					<ul id="headsearch">	
+						<% form_tag :controller => 'search', :action => 'index'  do  %>
+						<%= text_field_tag :query, "Suchen ...", :onfocus => 'clearDefault(this)', :onBlur => 'replaceDefault(this)', :size => 50, :class => 'searchinput' %>
+						&nbsp;	<%= submit_tag "         ", :class => "go" %>
+						<% end %>
+					</ul>
+			</div>
+
+		</div>
+	</dív>
+
+	<div id="log">
+		<ul>
+		<% if logged_in? %>
+		<li>Logged in as:</li>
+		<li><%= link_to h(current_user.login.capitalize), user_path(current_user) %></li>
+		<ul>
+			<li><%= link_to 'Edit Profile', edit_user_path(current_user) %></li>
+			<li><%= link_to 'Change Password', change_password_path %></li>
+			<li><%= link_to 'Log Out', logout_url %></li>
+			<% if current_user.has_role?('administrator') %>
+			<li><%= link_to 'Administer Users', users_path %></li>
+			<li><%= link_to 'Benutzer hinzufügen', new_user_path %></li>
+			<li><%= link_to 'New Image Ad', :controller => 'image_ads', :action => 'new' %></li>
+			<li><%= link_to 'New Flash Ad', :controller => 'flash_ads', :action => 'new' %></li>
+			<li><%= link_to 'New Landingpage', :controller => 'landingpages', :action => 'new' %></li>
+			<% end %>
+			<% else %>
+			<%= render :partial => 'sessions/new' %>
+			<% end %>
+
+		</ul>
+	</div>
+	<div id="content">
+		<%= yield %>
+	</div>
+	<div id="bg_bottom">
+	</div>
+</div>
+</body>
+</html>

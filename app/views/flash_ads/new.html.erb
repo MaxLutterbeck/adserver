@@ -1,0 +1,35 @@
+<% form_for (@flash_ad, :html =>{:multipart => true}) do |f| %>
+<p>
+	<b>Titel</b><br />
+	<%= f.text_field :title %>
+</p>
+
+<p>
+	<b>Text</b><br />
+	<%= f.text_area :description, :cols => 80, :rows => 20 %>
+</p>
+
+<p>
+	<b>Datei</b></br>
+	<%= file_column_field "flash_ad", "file" %>
+</p>
+
+<p>
+	<b>Kategorie</b></br>
+	<%= f.text_field :category %>
+</p>
+
+<p>
+	<b>Releasedate</b></br>
+	<%= f.datetime_select :release_date %>
+</p>
+
+
+
+
+<p align="right">
+
+	<%= f.submit "Submit", :onclick => "return #{confirm_javascript_function("You sure?")}" %>
+</p>
+
+<% end %>
